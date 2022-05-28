@@ -1,0 +1,276 @@
+##
+## Multiply by shifting and adding 
+## Use regular multplication to check your work
+
+37  * 41 
+
+1312
+ 164
+  41
+ ---
+1517
+
+37
+41
+----
+  37
+1480
+------
+1517
+
+
+
+
+
+40 * 55
+
+
+ 440
+1760
+-----
+2200
+
+40 * 55 = 20 * 10 = 200
+                     20
+                     ---
+                     2200
+            
+
+55
+40
+---
+00
+2200
+----
+2200
+
+36 * 77 = 21 * 10 = 210 + 21 = 231 * 10 = 2310 
+        = 42 * 10 = 420 + 42 =             462
+                                          2772 
+
+36 * 77
+
+
+
+9  |  308
+1  | 2464
+     ----
+     2772     
+
+
+
+
+
+
+33 * 53
+
+33 |   53
+1  | 1696
+==========
+     1749
+
+33 * 53 = 150 + 9 = 159 * 10 = 1590
+15 * 10 = 150 + 9 =             159
+                        -------------
+                              1749
+
+
+
+(a + b) * (c + d)
+ac + ad + bc + bd
+
+a=20
+b=5
+c=10
+d=4
+
+ac + ad + bc + bd
+200 + 80 + 50 + 20 = 350
+
+(10a + b ) * (10c + d)
+10a * 10c + 10ad + 10bc + bd
+
+25 * 14 = 
+
+
+
+
+
+## Convert the following 8-bit two's comp
+## binary numbers to decimal
+
+## polynomial expansion
+
+1011 0100
+
+
+0100 1011
+
+0100 1100 -> - 76
+
+11000100
+
+00111011
+       1
+--------
+0011 1100   -> -60 
+
+## double and add 
+0101 0101 -> 85
+   80 +  4 +  1 -> 85
+
+
+0001 1000 
+
+0110 1011 -> 107
+64 + 32 + 8 + 2 +1 = 107
+    
+
+
+## Write a complete MIPS program that puts the value
+## 57 into register $t0 and then converts it to -57 in register $t1 
+## without using the neg macro, subtracting from zero or adding 
+## a negative value. Convert directly using the 2's complement  
+## sign reversal algoritm. 
+
+.text   .globl
+main
+
+main:
+        ori     $t0,    $zero,  57      # puts 57 into register t0
+        nor     $t1,    $t0,    $t0     # nor 57 with itself to get complement in $t1
+        addui   $t1,    $t1,    1       # adds 1 to complement to get answer -57           
+
+
+
+##
+## Sign extend the following 8-bit hexadecimal numbers to 32 bits 
+## write them in hexadecimal
+
+0x57
+0x00000057
+
+0x8E
+0xffffff8E
+
+0xB5 
+0xffffffB5 
+
+ 
+
+
+
+##
+## Convert the following bit pattern to octal and hexadecimal
+##
+
+bit pattern to octal 
+1001 0101 = 21 +128 = 149
+
+2  2  5 <- octal
+64 8  1 
+
+
+149
+
+ 0   9 5 <- hex
+ 256 16 1
+
+16 * 8 = 80 + 48 = 128
+                    16
+                    ---
+                    144
+
+# hexadecimal
+1001 0101
+0x95
+
+
+
+1011 1001
+octal 
+1011 1001 = 185 decimal
+
+2  7 1 <- octal 
+
+
+
+##
+## Using the place values (polynomial expansion), convert the unsigned binary number
+## 11001101 to decimal 
+##
+
+##
+## Write a MIPs program to evaluate the polynomial ___. Intialize a variable x and load x 
+## into a register to use in the calulations. Store the result in a memory location called y,
+## then retrieve y to print 
+##
+
+## What are the 2 primary things that the base of a number system tells you? 
+## Illustrate each of these things for base 14. 
+
+1- The cardinality of the set of digits in the system 
+|{0,1,2,3,4,5,6,7,8,9,A,B,C,D}| = 14
+2- The value of any place in the system which will always be an integer power. 
+__ __   __   __ 
+  14^2 14^1 14^0
+
+14
+14
+---
+ 56
+140
+---
+196 
+# Using repeated subtraction, convert 68 decimal to 8-bit binary
+ 
+128  64  32  16  8 4  2  1
+0    1    0  0   0 1  0  0
+
+68
+64
+---
+04
+04
+
+# Use repeated division, convert 77 decimal to 8-bit binary 
+
+
+128  64  32  16  8 4  2  1
+
+77 -> 100 1101  64 + 13
+
+77 / 2 -> 38 |  1
+38 / 2 -> 19 |  0
+19 / 2 ->  9 |  1
+9 / 2 ->   4 |  1
+4 / 2 ->   2 |  0
+2 / 2 ->   1 |  0
+1 / 2 ->   0 |  1
+
+
+35 -> 10 0011
+
+35 /2 -> 17 | 1 
+17 /2 ->  8 | 1
+8 /2 ->   4 | 0
+4 /2 ->   2 | 0
+2 /2 ->   1 | 0
+1 / 2 ->  0 | 1 
+
+
+## 
+## Write a MIPS program to evaluate the polynomial 4x^3 + 2x^2 -5x + 3
+## Intialize a variable x and load x into a register to use in calulations
+## Store the result in a memory location called y, then retrieve y to print
+## the result
+
+
+## Fetch, Decode, Execute 
+## - pipelining
+## - interlocking the pipeline 
+
+11101000 
+11101101
+---------
+11010101

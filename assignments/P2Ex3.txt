@@ -1,0 +1,15 @@
+# assignment-2,3.asm
+#
+# Lisa Lehrman
+# Feb 17, 2022
+# CS21 Assignment 2
+
+The results of the addu and add operations
+do not match. There was an overflow in the unsigned 
+operation.
+R9  [t1] = -536870912
+R10 [t2] = 1879048192
+
+After moving the number 16 bits, the original number 
+doubled must not be bigger than 15 bits because otherwise 
+we're in the 32nd bit. Once that is flipped we're negative. 
